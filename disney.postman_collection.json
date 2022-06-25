@@ -1,0 +1,420 @@
+{
+	"info": {
+		"_postman_id": "0fd4e434-4fc2-423e-8223-646b3199e6ec",
+		"name": "disney",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20677265"
+	},
+	"item": [
+		{
+			"name": "genre",
+			"item": [
+				{
+					"name": "add genre",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZXBpdG9AZ21haWwuY29tIiwiZXhwIjoxNjU2MjI2MjUzLCJpYXQiOjE2NTYxOTAyNTN9.jywBKWE6llImHePfBFRWmrL1V1i2tuhtRaioY95FaRw",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/genre",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"genre"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "character",
+			"item": [
+				{
+					"name": "add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"buzz\",\r\n    \"image\":\"buzz.jpg\",\r\n    \"history\":\"its a toy\",\r\n    \"weight\":\"20\",\r\n    \"age\":\"15\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/characters",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"characters"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/character/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"character",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"buzz\",\r\n    \"image\":\"buzz.jpg\",\r\n    \"history\":\"its a toy\",\r\n    \"weight\":\"20\",\r\n    \"age\":\"15\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/characters/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"characters",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "read",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/characters/17",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"characters",
+								"17"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "combine",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/characters?age=118&movies=14",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"characters"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "buzz",
+									"disabled": true
+								},
+								{
+									"key": "age",
+									"value": "118"
+								},
+								{
+									"key": "movies",
+									"value": "14"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "movies",
+			"item": [
+				{
+					"name": "add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"image\":\"piratas.jpg\",\r\n    \"title\":\"piratas del caribe\",\r\n    \"creationDate\":\"2022-05-26\",\r\n    \"calification\":\"2\",\r\n    \"genreId\":\"3\",\r\n    \"characters\":[{\r\n    \"name\":\"buzz\",\r\n    \"image\":\"buzz.jpg\",\r\n    \"history\":\"its a toy\",\r\n    \"weight\":\"20\",\r\n    \"age\":\"15\"}\r\n]\r\n\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/movies",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/movies/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movies",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"image\":\"piratas.jpg\",\r\n    \"title\":\"piratas del caribe\",\r\n    \"creationDate\":\"2022-05-26\",\r\n    \"calification\":\"2\",\r\n    \"genreId\":\"3\",\r\n    \"characters\":[{\r\n    \"name\":\"buzz\",\r\n    \"image\":\"buzz.jpg\",\r\n    \"history\":\"its a toy\",\r\n    \"weight\":\"20\",\r\n    \"age\":\"15\"}\r\n]\r\n\r\n\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/movies/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movies",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "read",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/movies/14",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movies",
+								"14"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addCharacter",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/movies/6/characters/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movies",
+								"6",
+								"characters",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "removeCharacter",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/movies/6/characters/15",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movies",
+								"6",
+								"characters",
+								"15"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "combine",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/movies?genre=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movies"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "genre",
+									"value": "1"
+								},
+								{
+									"key": "order",
+									"value": "asc",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"pepito@gmail.com\",\r\n    \"password\":\"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"pepito@gmail.com\",\r\n    \"password\":\"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
